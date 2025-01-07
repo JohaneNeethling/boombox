@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #6c63ff, #0088cc);
+  background: #0d0117;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: backgroundAnimation 5s infinite alternate;
+}
+
+.the-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  flex-direction: column;
+}
+
+@keyframes rotateImage {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0000, 0 0 30px #ff0000,
+      0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000;
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff1900,
+      0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000, 0 0 70px #ff0000;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0000, 0 0 30px #ff0000,
+      0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000;
+  }
+}
+
+.reg-form-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 450px;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10%);
+  animation: floatingEffect 3s ease-in-out infinite;
+}
+
+@keyframes floatingEffect {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.register-header {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  animation: glow 1.5s infinite alternate;
+  margin-bottom: 30px;
+}
+
+.reg-input-text {
+  width: 100%;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: #f4f7fc;
+  font-size: 1em;
+  transition: all 0.3s ease-in-out;
+}
+
+.reg-input-text:focus {
+  border-color: #ff1d0a;
+  box-shadow: 0 0 8px rgba(255, 38, 0, 0.7);
+  outline: none;
+  background-color: #ffffff;
+}
+
+.register-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff1d0a;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 15px;
+}
+
+.register-button:hover {
+  background-color: #fa911f;
+  transform: scale(1.05);
+}
+
+.have-acc-tag {
+  font-size: 1em;
+  color: #333;
+}
+
+.login-link-button {
+  color: #ff1d0a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link-button:hover {
+  text-decoration: underline;
+  color: #fa911f;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  animation: modalSlideIn 0.5s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close-button {
+  padding: 10px 20px;
+  background-color: #6c63ff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-close-button:hover {
+  background-color: #5a54e1;
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+  .register-header {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .reg-form-container {
+    padding: 25px 20px;
+    transform: translateY(0);
+  }
+
+  .reg-input-text {
+    padding: 12px;
+    font-size: 0.9em;
+  }
+
+  .register-button {
+    padding: 12px;
+    font-size: 1em;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+
+  .modal-close-button {
+    padding: 8px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-header {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+
+  .reg-form-container {
+    padding: 20px 15px;
+  }
+
+  .reg-input-text {
+    padding: 10px;
+    font-size: 0.85em;
+  }
+
+  .register-button {
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  .modal-content {
+    padding: 15px;
+  }
+
+  .modal-close-button {
+    padding: 6px 15px;
+  }
+}

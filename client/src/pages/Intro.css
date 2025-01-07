@@ -1,0 +1,143 @@
+.intro-container {
+  background-color: #0d0117;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.text-container {
+  padding-bottom: 7rem;
+}
+
+.intro-title {
+  font-size: 8rem;
+  letter-spacing: 2rem;
+  font-weight: 800;
+  background: -webkit-linear-gradient(#fa911f, #ff1d0a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.intro-link {
+  text-decoration: none;
+}
+
+.boomBoxLogo {
+  width: auto;
+  height: 15rem;
+}
+
+.get-started-button {
+  background: white;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+}
+
+.intro-title:hover {
+  letter-spacing: 2.2rem;
+}
+
+.get-started-button:hover {
+  transform: scale(1.05);
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0000, 0 0 30px #ff0000,
+      0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000;
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff1900,
+      0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000, 0 0 70px #ff0000;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0000, 0 0 30px #ff0000,
+      0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000;
+  }
+}
+
+@media (max-width: 1024px) {
+  .intro-title {
+    font-size: 6rem;
+    letter-spacing: 1.5rem;
+  }
+
+  .boomBoxLogo {
+    height: 12rem;
+  }
+
+  .get-started-button {
+    font-size: 1.8rem;
+    letter-spacing: 0.8rem;
+  }
+
+  .text-container {
+    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-title {
+    font-size: 5rem;
+    letter-spacing: 1rem;
+  }
+
+  .boomBoxLogo {
+    height: 10rem;
+  }
+
+  .get-started-button {
+    font-size: 1.5rem;
+    letter-spacing: 0.6rem;
+  }
+
+  .text-container {
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-container {
+    height: auto;
+    padding: 20px;
+  }
+
+  .intro-title {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .boomBoxLogo {
+    height: 7rem;
+    margin-left: 1.2rem;
+  }
+
+  .get-started-button {
+    font-size: 1.2rem;
+    letter-spacing: 0.4rem;
+  }
+
+  .text-container {
+    padding-bottom: 2rem;
+  }
+}
