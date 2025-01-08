@@ -31,7 +31,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       // Sending a logout request to the server
-      await axios.post("http://localhost:5000/auth/logout");
+      await axios.post("https://boombox-1.onrender.com/auth/logout");
 
       // Updating the state to indicate the user is logged out
       setUserLoggedIn(false);
