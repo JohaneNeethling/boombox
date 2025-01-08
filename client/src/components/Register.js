@@ -3,7 +3,6 @@ import { registerUser } from "../api"; // Importing the registerUser function fr
 import { useNavigate, Link } from "react-router-dom"; // Importing navigation hooks from react-router-dom
 import Modal from "../components/Modal"; // Importing Modal component to show error messages
 import "./Register.css"; // Importing the associated CSS file for styling
-import Sing from "../media/Sing.gif"; // Importing a gif image to display on the registration page
 
 const Register = () => {
   // State variables for storing input values and error messages

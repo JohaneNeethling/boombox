@@ -13,7 +13,7 @@ const app = express();
 
 // CORS configuration to allow specific origin (e.g., localhost:3000)
 const corsOptions = {
-  origin: "http://localhost:3000", // Specify the allowed origin
+  origin: "https://boombox-6y0e.onrender.com", // Specify the allowed origin
   methods: ["GET", "POST", "PUT", "DELETE"], // Allow specific HTTP methods
   credentials: true, // Allow sending credentials (cookies, etc.)
 };
