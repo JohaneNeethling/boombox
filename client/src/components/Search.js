@@ -39,9 +39,12 @@ const SearchPage = () => {
 
     try {
       // Make API request to fetch media based on search term and media type
-      const response = await axios.get("http://localhost:5000/media/search", {
-        params: { term: searchTerm, mediaType: mediaType, page: page },
-      });
+      const response = await axios.get(
+        "${process.env.REACT_APP_API_URL}/media/search",
+        {
+          params: { term: searchTerm, mediaType: mediaType, page: page },
+        }
+      );
       setResults(response.data.results); // Set search results
       setTotalPages(response.data.totalPages || 1); // Set total pages for pagination
       setCurrentPage(page); // Update current page
@@ -90,7 +93,7 @@ const SearchPage = () => {
 
       // Proceed with adding to favorites via API request
       const response = await axios.post(
-        "http://localhost:5000/favorites",
+        "${process.env.REACT_APP_API_URL}/favorites",
         {
           title: item.title,
           artist: item.artist,

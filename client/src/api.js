@@ -2,7 +2,7 @@
 import axios from "axios";
 
 // Defining the base API URL for the backend server
-const API_URL = "http://localhost:5000";
+const API_URL = "https://boombox-6y0e.onrender.com";
 
 // Function to register a new user, sends user data to the backend
 export const registerUser = async (userData) => {
