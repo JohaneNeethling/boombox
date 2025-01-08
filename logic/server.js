@@ -11,9 +11,9 @@ dotenv.config();
 // Create an Express app instance
 const app = express();
 
-// CORS configuration to allow specific origin (e.g., localhost:3000)
+// CORS configuration to allow specific origin
 const corsOptions = {
-  origin: "https://boombox-1.onrender.com", // Specify the allowed origin
+  origin: "*", // Allow requests from all origins
   methods: ["GET", "POST", "PUT", "DELETE"], // Allow specific HTTP methods
   credentials: true, // Allow sending credentials (cookies, etc.)
 };
