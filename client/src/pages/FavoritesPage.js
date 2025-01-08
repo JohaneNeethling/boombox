@@ -16,11 +16,14 @@ const FavoritesPage = () => {
     const fetchFavorites = async () => {
       try {
         // Make an API call to fetch favorites
-        const response = await axios.get("http://localhost:5000/favorites", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`, // Add token to header for authorization
-          },
-        });
+        const response = await axios.get(
+          "https://boombox-6y0e.onrender.com/favorites",
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`, // Add token to header for authorization
+            },
+          }
+        );
 
         // Remove duplicates based on mediaId
         const uniqueFavorites = Array.from(
@@ -94,9 +97,12 @@ const FavoritesPage = () => {
   const handleRemoveFromFavorites = async (mediaId) => {
     try {
       // Make an API call to remove the favorite item
-      await axios.delete(`http://localhost:5000/favorites/${mediaId}`, {
-        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }, // Add token to header for authorization
-      });
+      await axios.delete(
+        `https://boombox-6y0e.onrender.com/favorites/${mediaId}`,
+        {
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }, // Add token to header for authorization
+        }
+      );
 
       // Update the favorites list by filtering out the removed item
       setFavorites((prevFavorites) =>
