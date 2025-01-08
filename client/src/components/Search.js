@@ -40,7 +40,7 @@ const SearchPage = () => {
     try {
       // Make API request to fetch media based on search term and media type
       const response = await axios.get(
-        "${process.env.REACT_APP_API_URL}/media/search",
+        "https://boombox-6y0e.onrender.com/media/search",
         {
           params: { term: searchTerm, mediaType: mediaType, page: page },
         }
@@ -93,7 +93,7 @@ const SearchPage = () => {
 
       // Proceed with adding to favorites via API request
       const response = await axios.post(
-        "${process.env.REACT_APP_API_URL}/favorites",
+        "https://boombox-6y0e.onrender.com/favorites",
         {
           title: item.title,
           artist: item.artist,
